@@ -1,0 +1,16 @@
+# OASIS_START
+# DO NOT EDIT (digest: a845712ed7dc7532d014b7dfc2acc6ae)
+Lint
+Lint_sym
+Option
+Repeater
+Simple
+SimpleStaged
+ErrorHandling
+ErrorHandlingStaged
+CpsErrorHandling
+CpsErrorHandlingStaged
+InliningStaged
+InliningNoDupStaged
+InliningCPSErrorHandlingStaged
+# OASIS_STOP

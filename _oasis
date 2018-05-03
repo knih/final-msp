@@ -1,0 +1,34 @@
+OASISFormat: 0.4
+Name:        final-msp
+Version:     0.1
+Synopsis:    Multi-stage programming in the typed-final (tagless-final) style
+Authors:     knih
+License:     MIT
+Plugins:
+  META (0.4),
+  DevFiles (0.4)
+
+# +-------------------------------------------------------------------+
+# | Libraries                                                         |
+# +-------------------------------------------------------------------+
+
+Library lint
+  Findlibname:      final-msp
+  Path:             lib
+  BuildTools:       ocamlbuild
+  InternalModules:
+    Lint_sym,
+    Option,
+    Repeater,
+    Simple,
+    SimpleStaged,
+    ErrorHandling,
+    ErrorHandlingStaged,
+    CpsErrorHandling,
+    CpsErrorHandlingStaged,
+    InliningStaged,
+    InliningNoDupStaged,
+    InliningCPSErrorHandlingStaged
+  Modules:
+    Lint
+

@@ -1,0 +1,12 @@
+# OASIS_START
+# DO NOT EDIT (digest: e9ba0fa28f56cc9257415a0e1a9ac58b)
+version = "0.1"
+description =
+"Multi-stage programming in the typed-final (tagless-final) style"
+archive(byte) = "lint.cma"
+archive(byte, plugin) = "lint.cma"
+archive(native) = "lint.cmxa"
+archive(native, plugin) = "lint.cmxs"
+exists_if = "lint.cma"
+# OASIS_STOP
+
