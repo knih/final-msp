@@ -59,10 +59,8 @@ let ifz e1 e2 e3 = { ko = fun k ->
     | _      -> k None
   }
 
-let eval e = match e.ko (fun k -> k) with
-    Some x -> x
-  | None   -> raise Division_by_zero
+let eval e = e.ko (function Some x -> x
+                          | None   -> raise Division_by_zero)
 
 type 'a obs = 'a option
 let observe e = (e ()).ko (fun k -> k)
-
