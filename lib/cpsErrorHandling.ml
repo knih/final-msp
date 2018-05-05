@@ -49,7 +49,7 @@ let div e1 e2 = { ko = fun k ->
     e1.ko @@ fun v1 ->
     e2.ko @@ fun v2 ->
     match (v1, v2) with
-      (Some x, Some y) -> k @@ Some (x / y)
+      (Some x, Some y) -> if y=0 then k None else k @@ Some (x / y)
     | _                -> k None
   }
 let ifz e1 e2 e3 = { ko = fun k ->
