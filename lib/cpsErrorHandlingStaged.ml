@@ -68,10 +68,8 @@ let ifz e1 e2 e3 = { ko = fun k ->
 let eval (e: 'a repr) = Runcode.run @@ e.ko (fun k ->
     match k with
       Some x -> x
-    | None   -> raise Division_by_zero)
+    | None   -> .<raise Division_by_zero>.)
 
 type 'a obs = 'a code
-let observe e = (e ()).ko (fun k ->
-    match k with
-      Some x -> x
-    | None   -> raise Division_by_zero)
+let observe e = (e ()).ko (function Some x -> x
+                                  | None   -> .<raise Division_by_zero>.)
