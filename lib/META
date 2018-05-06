@@ -1,8 +1,9 @@
 # OASIS_START
-# DO NOT EDIT (digest: e9ba0fa28f56cc9257415a0e1a9ac58b)
+# DO NOT EDIT (digest: 19bce4d665a340229d61e46581feddc8)
 version = "0.1"
 description =
 "Multi-stage programming in the typed-final (tagless-final) style"
+requires = "ppx_deriving ppx_deriving.show"
 archive(byte) = "lint.cma"
 archive(byte, plugin) = "lint.cma"
 archive(native) = "lint.cmxa"

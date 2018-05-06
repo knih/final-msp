@@ -16,6 +16,7 @@ Library lint
   Findlibname:      final-msp
   Path:             lib
   BuildTools:       ocamlbuild
+  BuildDepends:     ppx_deriving, ppx_deriving.show
   InternalModules:
     Lint_sym,
     Option,
@@ -30,7 +31,8 @@ Library lint
     InliningNoDupStaged,
     InliningCPSErrorHandlingStaged
   Modules:
-    Lint
+    Lint,
+    Lint_print
 
 # +-------------------------------------------------------------------+
 # | Examples                                                          |
@@ -40,6 +42,6 @@ Executable run_fact
   Path:             examples
   MainIs:           fact.ml
   Install:          false
-  BuildDepends:     final-msp, ppx_deriving, ppx_deriving.show
+  BuildDepends:     final-msp
   BuildTools:       ocamlbuild
 

@@ -1,5 +1,5 @@
 open Lint
-open Printf
+open Lint_print
 open Format
 
 module EX(S:Symantics) = struct
@@ -20,15 +20,6 @@ module Eval6 = EX(CpsErrorHandlingStaged)
 module Eval7 = EX(InliningStaged)
 module Eval8 = EX(InliningNoDupStaged)
 module Eval9 = EX(InliningCPSErrorHandlingStaged)
-
-let print_simple obs =
-  try printf "%d\n" (obs ())
-  with Division_by_zero -> print_string "Exception: Division_by_zero\n"
-
-let print_code obs = Print_code.print_code std_formatter (obs ())
-
-let print_option obs =
-  print_endline ([%derive.show: int option] (obs ()))
 
 let _ = print_flush @@ print_string "Eval1: "; print_simple Eval1.fact10
 let _ = print_flush @@ print_string "Eval2: "; print_code   Eval2.fact10
