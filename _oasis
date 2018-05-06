@@ -45,3 +45,10 @@ Executable run_fact
   BuildDepends:     final-msp
   BuildTools:       ocamlbuild
 
+Executable run_error
+  Path:             examples
+  MainIs:           error.ml
+  Install:          false
+  BuildDepends:     final-msp
+  BuildTools:       ocamlbuild
+
