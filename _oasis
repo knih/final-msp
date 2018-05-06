@@ -32,3 +32,14 @@ Library lint
   Modules:
     Lint
 
+# +-------------------------------------------------------------------+
+# | Examples                                                          |
+# +-------------------------------------------------------------------+
+
+Executable run_fact
+  Path:             examples
+  MainIs:           fact.ml
+  Install:          false
+  BuildDepends:     final-msp, ppx_deriving, ppx_deriving.show
+  BuildTools:       ocamlbuild
+

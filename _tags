@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 12080a9dd59fe57289f448907643a1cf)
+# DO NOT EDIT (digest: 151accd2d3f6063267f276e2ce18c0d9)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -16,4 +16,11 @@ true: annot, bin_annot
 "_darcs": not_hygienic
 # Library lint
 "lib/lint.cmxs": use_lint
+# Executable run_fact
+"examples/fact.byte": pkg_ppx_deriving
+"examples/fact.byte": pkg_ppx_deriving.show
+"examples/fact.byte": use_lint
+<examples/*.ml{,i,y}>: pkg_ppx_deriving
+<examples/*.ml{,i,y}>: pkg_ppx_deriving.show
+<examples/*.ml{,i,y}>: use_lint
 # OASIS_STOP
